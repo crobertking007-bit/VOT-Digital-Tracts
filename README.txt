@@ -1,13 +1,13 @@
-STANDALONE GOSPEL TRACT WEBSITE
+THIS IS YOUR HIGHER AUTHORITY COURT SUMMONS
 
-Upload all five files in this ZIP to a new static website hosting project. Keep filenames unchanged.
+Static website rebuilt from the approved 32-panel master image supplied by the author.
 
-index.html = standalone home page
-reader.html = interactive animated flipbook (self-contained)
-cover.png = cover art
-tract.pdf = PDF alternative
-animated-preview.mp4 = video alternative
+Files:
+- index.html: landing page
+- reader.html: interactive 32-page reader
+- pages/: the 32 numbered illustrated panels in their supplied order
+- tract.pdf: downloadable 32-page PDF
+- animated-preview.mp4: 80-second video edition
+- master-composite.jpeg: unchanged supplied master image
 
-A public HTTPS address is not included. You must deploy to a web host (e.g. Netlify, Cloudflare Pages, GitHub Pages, or your own hosting) and optionally attach a custom domain.
-
-This edition preserves the wording in the supplied 23-panel composite; it has not been reconciled against the separately locked original manuscript.
+No server or paid hosting features are required.
