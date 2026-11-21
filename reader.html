@@ -6,6 +6,28 @@
   <meta name="theme-color" content="#090704">
   <title>Read — Higher Authority Court Summons</title>
   <link rel="stylesheet" href="styles.css?v=page-fit-1">
+  <style>
+    .reader-shell { height: calc(100dvh - 3.75rem); }
+    .book-stage { container-type: size; }
+    .book-stage .book {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: min(100cqw, 181.8181818cqh);
+      height: auto;
+      aspect-ratio: 20 / 11;
+      background: var(--paper);
+    }
+    .book .page-image { animation: none; object-fit: contain; }
+    .book:has(.turn-next) {
+      transform-origin: left center;
+      animation: turnNext .48s cubic-bezier(.55,.02,.35,1);
+    }
+    .book:has(.turn-previous) {
+      transform-origin: right center;
+      animation: turnPrevious .48s cubic-bezier(.55,.02,.35,1);
+    }
+  </style>
 </head>
 <body class="reader-page">
   <header class="reader-header">
