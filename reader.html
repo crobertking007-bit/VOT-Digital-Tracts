@@ -6,6 +6,17 @@
   <meta name="theme-color" content="#090704">
   <title>Read — Higher Authority Court Summons</title>
   <link rel="stylesheet" href="styles.css?v=page-fit-1">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const book = document.getElementById('book');
+      const image = document.getElementById('pageImage');
+      const updateBackdrop = () => {
+        book.style.setProperty('--page-art', 'url(' + JSON.stringify(image.src) + ')');
+      };
+      new MutationObserver(updateBackdrop).observe(image, { attributes: true, attributeFilter: ['src'] });
+      updateBackdrop();
+    });
+  </script>
   <style>
     .reader-shell { height: calc(100dvh - 3.75rem); }
     .book-stage { container-type: size; }
@@ -18,7 +29,15 @@
       aspect-ratio: 20 / 11;
       background: var(--paper);
     }
-    .book .page-image { animation: none; object-fit: fill; }
+    .book .page-image { position: relative; animation: none; object-fit: contain; }
+    .book::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--page-art) center / cover no-repeat;
+      filter: blur(22px) brightness(.65);
+      clip-path: inset(0);
+    }
     .book:has(.turn-next) {
       transform-origin: left center;
       animation: turnNext .48s cubic-bezier(.55,.02,.35,1);
