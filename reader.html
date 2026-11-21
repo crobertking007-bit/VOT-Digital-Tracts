@@ -5,48 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#090704">
   <title>Read — Higher Authority Court Summons</title>
-  <link rel="stylesheet" href="styles.css?v=page-fit-1">
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const book = document.getElementById('book');
-      const image = document.getElementById('pageImage');
-      const updateBackdrop = () => {
-        book.style.setProperty('--page-art', 'url(' + JSON.stringify(image.src) + ')');
-      };
-      new MutationObserver(updateBackdrop).observe(image, { attributes: true, attributeFilter: ['src'] });
-      updateBackdrop();
-    });
-  </script>
-  <style>
-    .reader-shell { height: calc(100dvh - 3.75rem); }
-    .book-stage { container-type: size; }
-    .book-stage .book {
-      position: absolute;
-      inset: 0;
-      margin: auto;
-      width: min(100cqw, 181.8181818cqh);
-      height: auto;
-      aspect-ratio: 20 / 11;
-      background: var(--paper);
-    }
-    .book .page-image { position: relative; animation: none; object-fit: contain; }
-    .book::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: var(--page-art) center / cover no-repeat;
-      filter: blur(22px) brightness(.65);
-      clip-path: inset(0);
-    }
-    .book:has(.turn-next) {
-      transform-origin: left center;
-      animation: turnNext .48s cubic-bezier(.55,.02,.35,1);
-    }
-    .book:has(.turn-previous) {
-      transform-origin: right center;
-      animation: turnPrevious .48s cubic-bezier(.55,.02,.35,1);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="reader-page">
   <header class="reader-header">
