@@ -150,9 +150,9 @@ h1 span { color: var(--gold); }
 
 .book {
   position: relative;
-  height: min(100%, calc((100vw - 4rem) * 1.3333));
-  aspect-ratio: 3 / 4;
-  max-width: calc(100vw - 4rem);
+  width: min(100%, 62rem);
+  height: 100%;
+  max-width: calc(100vw - 2rem);
   transform-style: preserve-3d;
   filter: drop-shadow(0 1.25rem 2rem rgba(0,0,0,.62));
 }
@@ -162,8 +162,8 @@ h1 span { color: var(--gold); }
   width: 100%;
   height: 100%;
   object-fit: contain;
-  background: white;
-  border: 1px solid rgba(255,255,255,.68);
+  background: transparent;
+  border: 0;
   backface-visibility: hidden;
   transform-origin: left center;
 }

@@ -5,7 +5,7 @@ Static website rebuilt from the approved 32-panel master image supplied by the a
 Files:
 - index.html: landing page
 - reader.html: interactive 32-page reader
-- pages/: the 32 numbered illustrated panels in their supplied order
+- pages/: the 32 numbered illustrated panels in their supplied order and exact source proportions
 - tract.pdf: downloadable 32-page PDF
 - animated-preview.mp4: 80-second video edition
 - master-composite.jpeg: unchanged supplied master image
